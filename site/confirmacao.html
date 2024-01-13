@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposta de Noivado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #ffc0cb; /* Fundo rosa */
+    }
+
+    h1 {
+      color: #333; /* Cor do texto */
+    }
+
+    button {
+      background-color: #4caf50; /* Cor do botão Sim */
+      color: white; /* Cor do texto no botão Sim */
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+    }
+
+    #naoBtn {
+      background-color: #ff6347; /* Cor do botão Não */
+      position: relative;
+      transition: transform 0.5s;
+    }
+
+    #naoBtn:hover {
+      transform: translateX(20px); /* Movimento horizontal ao passar o mouse */
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ester quer noivar comigo?</h1>
+
+  <img src="./img/hacker.png" alt="Computador Emoji">
+  <img src="./img/saude.png" alt="Médico Emoji">
+  <br>
+
+  
+  <button onclick="redirecionar('https://w.app/d8oO7J')">Sim</button>
+  <button id="naoBtn" onclick="moverParaCanto()">Não</button>
+  <br>
+  <img src="./img/1.jpg" alt="Computador Emoji" width="800" height="700">
+  <img src="./img/2.jpg" alt="Médico Emoji"width="800" height="700">
+  <img src="./img/3.jpg" alt="Computador Emoji" width="800" height="700">
+  <img src="./img/4.jpg" alt="Médico Emoji"width="800" height="700">
+  <script>
+    function redirecionar(link) {
+      window.location.href = link;
+    }
+
+    function moverParaCanto() {
+      var naoBtn = document.getElementById('naoBtn');
+      var windowHeight = window.innerHeight;
+      var windowWidth = window.innerWidth;
+
+      var randomX = Math.floor(Math.random() * (windowWidth - naoBtn.clientWidth));
+      var randomY = Math.floor(Math.random() * (windowHeight - naoBtn.clientHeight));
+
+      naoBtn.style.position = 'absolute';
+      naoBtn.style.left = randomX + 'px';
+      naoBtn.style.top = randomY + 'px';
+    }
+  </script>
+
+</body>
+</html>
+
