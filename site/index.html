@@ -12,11 +12,20 @@
       background-color: #ffc0cb; /* Fundo rosa */
     }
 
-    h1 {
+    h2 {
       color: #333; /* Cor do texto */
     }
 
-    button {
+    #mensagem {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #simBtn {
       background-color: #4caf50; /* Cor do botão Sim */
       color: white; /* Cor do texto no botão Sim */
       padding: 10px 20px;
@@ -26,57 +35,35 @@
       border-radius: 5px;
       margin: 5px;
     }
-
-    #naoBtn {
-      background-color: #ff6347; /* Cor do botão Não */
-      position: relative;
-      transition: transform 0.5s;
-    }
-
-    #naoBtn:hover {
-      transform: translateX(20px); /* Movimento horizontal ao passar o mouse */
-    }
-
-    img {
-      width: 50px;
-      height: 50px;
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
 
-  <h1>Ester quer noivar comigo?</h1>
+  <div id="mensagem">
+    
+    <h2>Minha amada Ester,</h2>
+    <p>
+        Hoje, meu coração transborda de amor e gratidão ao relembrar cada capítulo da nossa jornada juntos. Sei que o início não foi fácil,
+         cheio de desafios e reviravoltas, mas foi justamente na superação desses obstáculos que nosso amor se fortaleceu.
+    </p>
+    <p>
+        Lembro-me como se fosse ontem do dia que estávamos sentados no banco da pracinha da Estácio. Naquele momento, mesmo com lágrimas nos olhos e corações pesados, prometi a mim mesmo e a você que nunca a deixaria de lado. Essa promessa, Ester, foi a âncora que nos manteve unidos, enfrentando as tempestades e celebrando os dias de sol que estavam por vir.
 
-  <img src="./img/hacker.png" alt="Computador Emoji">
-  <img src="./img/saude.png" alt="Médico Emoji">
-  <br>
+    </p>
+    <p>
+        E que dias maravilhosos foram esses que compartilhamos juntos! Recordo com carinho os nossos encontros na Santa Marta, as risadas e conversas que tornavam tudo mais leve. Lembro-me das viagens incríveis que fizemos, explorando juntos lugares mágicos como Aparecida, Beto Carrero, Balneário Camboriú, Recife, Olinda, Maragogi, Porto de Galinhas, Arraial do Cabo e Hopi Hari. Cada destino era uma página única na nossa história de amor, repleta de memórias que guardo como tesouros.
+    </p>
+    <p>
+        E que dizer das nossas idas ao cinema, dos momentos compartilhados diante da tela grande, onde não apenas assistíamos histórias fictícias, mas também construíamos a nossa própria narrativa de amor.
+    </p>
+    <p>
+        Agora, Ester, sinto que é o momento de dar mais um passo nessa jornada extraordinária que é a nossa história. Quero transformar cada lembrança em um alicerce sólido para o nosso futuro, construir uma vida repleta de amor, cumplicidade e realizações.
+    </p>
+    
 
-  <button onclick="redirecionar('https://w.app/d8oO7J')">Sim</button>
-  <button id="naoBtn" onclick="moverParaCanto()">Não</button>
-  <br>
-  <img src="./img/1.jpg" alt="Computador Emoji" width="600" height="500">
-  <img src="./img/2.jpg" alt="Médico Emoji"width="600" height="500">
-  <img src="./img/3.jpg" alt="Computador Emoji" width="600" height="500">
-  <img src="./img/4.jpg" alt="Médico Emoji"width="600" height="500">
-  <script>
-    function redirecionar(link) {
-      window.location.href = link;
-    }
-
-    function moverParaCanto() {
-      var naoBtn = document.getElementById('naoBtn');
-      var windowHeight = window.innerHeight;
-      var windowWidth = window.innerWidth;
-
-      var randomX = Math.floor(Math.random() * (windowWidth - naoBtn.clientWidth));
-      var randomY = Math.floor(Math.random() * (windowHeight - naoBtn.clientHeight));
-
-      naoBtn.style.position = 'absolute';
-      naoBtn.style.left = randomX + 'px';
-      naoBtn.style.top = randomY + 'px';
-    }
-  </script>
+    <h2>E agora depois de 5 anos, a pergunta mais esperada da noite...</h2>
+    <button onclick="redirecionar('confirmacao.html')" id="simBtn">Sim, estou pronta</button>
+  </div>
 
 </body>
 </html>
